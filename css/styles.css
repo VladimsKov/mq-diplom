@@ -565,7 +565,9 @@ body {
 .shop-card-prices {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
+	padding: 8px 0;
+	box-sizing: border-box;
 	font-weight: 700;
 	line-height: 16px;
 }
