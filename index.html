@@ -2,18 +2,17 @@
 <html lang="ru">
 	
 	<head>
-    <meta charset="utf-8" />
-    <title>MQ-diplom</title>
-    <link rel="stylesheet" href="css/styles.css">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MQ-diplom</title>
+		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	
 	<body>
-    <header class="header">
+		<header class="header">
 			<div class="header-wrap">
 				<div class="header-nav">
-					<a href="#0">
-						<img class="logo" src="svg/noemi-logo.svg" width="180" alt="logo">
-					</a>
+					<a class="logo" href="#0"></a>
 					<nav class="menu">
 						<ul class="menu-list">
 							<li class="menu-list-item">
@@ -35,16 +34,21 @@
 								<a class="menu-link" href="#0">контакты</a>
 							</li>
 						</ul>
+						<div class="tablet-menu">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
 					</nav>
 				</div>
 				<h1 class="header-title">блог о творчестве, спорте и образе жизни</h1>
 			</div>
 		</header>
 		
-    <!-- section trends -->
+		<!-- section trends -->
 		
-    <section class="trend-section">
-			<h2 class="page-section-title">
+		<section class="trend-section">
+			<h2 class="page-section-title trend-section-title">
 				сейчас в тренде
 			</h2>
 			<div class="trend-section-wrap">
@@ -111,9 +115,9 @@
 			</div>
 		</section>
 		
-    <!-- основной контент -->
+		<!-- основной контент -->
 		
-    <div class="page-wrap">
+		<div class="page-wrap">
 			<div class="content">
 				
 				<!-- section main posts-->
@@ -374,10 +378,13 @@
 			
 			<!--shop section -->
 			<section class="shop-section">
-				<h2 class="page-section-title">изделия</h2>
+				<h2 class="page-section-title shop-section-title">изделия</h2>
 				<div class="shop-section-wrap">
 					<article class="shop-card">
-						<img src="images/shop-item-desk1.jpg" alt="shop-card-image">
+						<picture>
+							<source media="(min-width: 641px) and (max-width: 1200px)" srcset="images/shop-item-tablet1.jpg">
+							<img src="images/shop-item-desk1.jpg" alt="shop-card-image">
+						</picture>
 						<div class="shop-card-header">
 							<h3 class="post-title shop-card-title">
 								<a href="#0 ">подушки на диван</a>
@@ -403,7 +410,10 @@
 					</article>
 					
 					<article class="shop-card">
-						<img src="images/shop-item-desk2.jpg" alt="shop-card-image">
+						<picture>
+							<source media="(min-width: 641px) and (max-width: 1200px)" srcset="images/shop-item-tablet2.jpg">
+							<img src="images/shop-item-desk2.jpg" alt="shop-card-image">
+						</picture>
 						<div class="shop-card-header">
 							<h3 class="post-title shop-card-title">
 								<a href="#0 ">кукла "зайчик"</a>
@@ -426,7 +436,10 @@
 					</article>
 					
 					<article class="shop-card">
-						<img src="images/shop-item-desk3.jpg" alt="shop-card-image">
+						<picture>
+							<source media="(min-width: 641px) and (max-width: 1200px)" srcset="images/shop-item-tablet3.jpg">
+							<img src="images/shop-item-desk3.jpg" alt="shop-card-image">
+						</picture>
 						<div class="shop-card-header">
 							<h3 class="post-title shop-card-title">
 								<a href="#0">шестиугольная рамка</a>
@@ -490,6 +503,45 @@
 					<a href="#0 ">Copyright © 2009–2019 City Blog LLC.</a>
 				</p>
 			</footer>
+		</div>
+		
+		<!--POPUP-->
+		
+		<div class="popup _hidden">
+			<div class="popup-container">
+				<h2 class="page-section-title popup-title">
+					ваш фидбек
+				</h2>
+				<form class="popup-form">
+					<div class="popup-group">
+						<label>
+							<span>Как часто вы заходите на сайт?</span>
+							<select class="popup-select">
+								<option value="" selected>Почти каждый день</option>
+								<option value="">Раз в несколько дней</option>
+								<option value="">Раз в несколько недель</option>
+								<option value="">Несколько раз в год</option>
+							</select>
+						</label>
+					</div>
+					<div class="popup-group">
+						<span>Вы подписаны на e-mail рассылку?</span> 
+						<label class="popup-radio-box">
+							<input class="popup-radio" type="radio" name="popup_ref" checked><span>Да</span>
+						</label>
+						<label>
+							<input class="popup-radio" type="radio" name="popup_ref"><span>Нет</span>
+						</label>
+					</div>
+					<div class="popup-group">
+						<label>
+							<span>Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+							<textarea class="popup-textarea" placeholder="Может, больше рецептов?" required></textarea>
+						</label>
+					</div>
+					<button class="subscribe-button" type="submit">отправить</button>
+				</form>
+			</div>
 		</div>
 	</body>
 	
