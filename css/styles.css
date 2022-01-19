@@ -31,9 +31,13 @@ body {
 
 .visually-hidden {
 	position: absolute;
-	width: 1px;
-	height: 1px;
-	clip: rect(1px, 1px, 1px, 1px);	
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* стили header */
 
@@ -560,12 +564,12 @@ body {
 .shop-card-header::after {
 	content: "";
 	position: absolute;
+	box-sizing: border-box;
 	top: -30px;
 	right: -24px;
 	left: -24px;
 	bottom: -30px;
 	border: 3px solid rgba(181, 159, 91, 0.6);
-	
 }
 .shop-card-title {
 	position: relative;
