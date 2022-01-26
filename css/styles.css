@@ -31,13 +31,13 @@ body {
 
 .visually-hidden {
 	position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 /* стили header */
 
@@ -291,7 +291,7 @@ body {
 	list-style-type: none;
 }
 
-.post-tags-item:first-child {
+.post-tags-item:not(:last-child) {
 	margin-right: 17px;
 }
 
@@ -684,12 +684,9 @@ body {
 
 /*popup*/
 
-._hidden {
-	display: none;
-}
-
-.popup {
+ .popup {
 	position: fixed;
+	display: flex;
 	top: 0;
 	z-index: 1;
 	width: 100%;
@@ -697,9 +694,12 @@ body {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+._hidden {
+	display: none;
+}
+
 .popup-container {
 	position: relative;
-	top: 238px;
 	width: 390px;
 	margin: auto;
 	padding: 0 30px 54px;
