@@ -694,9 +694,9 @@ body {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
-._hidden {
+/*._hidden {
 	display: none;
-}
+} */
 
 .popup-container {
 	position: relative;
